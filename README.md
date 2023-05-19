@@ -1,3 +1,13 @@
+# UI LOOK LIKE BELOW IMAGE
+
+HOME PAGE
+![web-screenshot-19-05-2023](https://github.com/Pavana004/cryto_task/assets/101943293/16dc7b02-da68-4b3e-b66b-930c76ebd392)
+
+CART PAGE
+![web-screenshot-19-05-2023 (1)](https://github.com/Pavana004/cryto_task/assets/101943293/4833e4f7-768b-480a-8247-29d5d1769d0a)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
