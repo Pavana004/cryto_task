@@ -1,38 +1,87 @@
-.App {
+body{
+  background-color: rgb(66, 66, 141);
+}
+.card{
+  width: 14rem;
   text-align: center;
+  height: 100%;
+  background-color: floralwhite;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-title {
+  font-size: x-large;
+  font-weight: bold;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-control {
+  width: 300px;
+  height: fit-content;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchbox{
+  justify-content:space-between;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 20px;
+}
+.carticon{
   color: white;
+  cursor: pointer;
 }
+.parents{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: 'Times New Roman', Times, serif;
 
-.App-link {
-  color: #61dafb;
 }
+.card-img-top{
+  width: 35%;
+  object-fit: contain;
+  margin: auto;
+}
+.cartConatiner{
+  width: 100%;
+  padding: 20px;
+  height: fit-content;
+  background-color:floralwhite;
+  border-radius: 20px;
+}
+.cartbuy{
+  width: 100%;
+  padding: 20px;
+  height: fit-content;
+  background-color:floralwhite;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.cartImage{
+  width: 100px;
+  object-fit: contain;
+}
+.CartDetails{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.splitCart{
+  width: 100%;
+  height: 50%;
+  margin: 10px;
+  font-variant-caps: petite-caps;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+}
+.carthead{
+  color: floralwhite;
+  font: bold;
+}
+.emptyCart{
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  color: white;
+  gap: 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
