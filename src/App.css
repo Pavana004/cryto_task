@@ -85,3 +85,78 @@ body{
   gap: 10px;
 
 }
+
+
+@media only screen and (max-width: 375px) {
+  /* For mobile phones: */
+  .carticon{
+    position: relative;
+    font-size: small;
+  }
+  .searchbox .btn{
+    position: absolute;
+    margin-bottom: 10px;
+  }
+  .searchbox input{
+    width: min-content;
+  }
+  .parents{
+    margin-left: 50px;
+    padding: auto;
+    display: flex;
+    align-items: center;
+  }
+   .cartConatiner{
+    width: min-content;
+    height: 100%;
+    font-size: x-small;
+    margin: auto;
+    padding: auto;
+       
+   }
+   .cartImage{
+       width: 10%;
+       height: min-content;
+   }
+   .card-title {
+      font-size: small;
+   }
+}
+
+@media only screen and (max-width: 425px) {
+  /* For mobile phones: */
+  .carticon{
+    position: relative;
+    font-size: small;
+  }
+  .searchbox .btn{
+    position: absolute;
+    margin-bottom: 10px;
+  }
+  .searchbox input{
+    width: min-content;
+  }
+  .parents{
+    margin-left: 50px;
+    padding: auto;
+    display: flex;
+    align-items: center;
+  }
+   .cartConatiner{
+    width: min-content;
+    height: 100%;
+    font-size: x-small;
+    margin: auto;
+    padding: auto;
+       
+   }
+   .cartImage{
+       width: 10%;
+       height: min-content;
+   }
+   .card-title {
+      font-size: small;
+   }
+}
+
+
