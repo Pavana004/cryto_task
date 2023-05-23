@@ -16,7 +16,7 @@ const Crypto = () => {
     const [filterData, setFilterData] = useState([]);
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
-    const Cartcount = useSelector((state) => state.cart.quantity);
+    const Cartcount = useSelector((state) => state.cart.item.length);
 
 
  //Api_call
@@ -73,7 +73,11 @@ const Crypto = () => {
                                             <p className="card-text">Current_Price : ${coinsDetails.current_price}</p>
                                             <p className="card-text" style={{ color: coinsDetails.price_change_percentage_24h < 0 ? "red" : "green" }} >Price_Change : {coinsDetails.price_change_percentage_24h}</p>
                                             <p className="card-text">Market_Cap : {coinsDetails.market_cap}</p>
-                                            <button type='button' className="btn btn-primary"style={{width:"7rem"}} onClick={() => dispatch(addCart(coinsDetails))}>Add</button>
+                                            {
+                                           <button type='button' className="btn btn-primary"style={{width:"7rem"}} onClick={() => dispatch(addCart(coinsDetails))}>Add</button> 
+                                           
+
+                                            }
                                         </div>
                                     </div>
                                 </div>

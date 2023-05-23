@@ -1,28 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { removeCart } from '../redux/cartslice';
+import { decrement, addCart, removeCart } from '../redux/cartslice';
 import { Link } from 'react-router-dom';
 
 
 const Cart = () => {
 
     const data = useSelector((state) => state.cart.item);
-    const [cartQuantity, setCartQuantity] = useState([1]);
     const dispatch = useDispatch()
 
-
-// Basic_count it not fully functionality 
-
-    const handleQuantity = (type) => {
-
-        if (type==="dec") {
-            cartQuantity > 1 && setCartQuantity(cartQuantity - 1);
-        } else {
-            setCartQuantity(cartQuantity + 1)
-        }
-
-    }
-
+   
   //Remove_Function  
 
     const handleRemove = (cartData) => {
@@ -47,6 +34,7 @@ const Cart = () => {
                 <div className="cartConatiner">
                     {
                         data.map((cartData) => {
+
                             return (
                                 <div className="splitCart">
                                     <div className="CartDetails" key={cartData.id}>
@@ -56,13 +44,12 @@ const Cart = () => {
                                         <h5 className="card-title mt-4">{cartData.name}</h5>
                                         <p className='cartsymbol mt-4'>({cartData.symbol})</p>
                                         <p className="card-text mt-4">{cartData.current_price}</p>
-
                                         <div className="conatiner d-flex">
-                                            <button type='button' className='btn btn-info ms-3' onClick={() => handleQuantity("dec")}>-</button>
+                                            <button type='button' className='btn btn-info ms-3'onClick={() => dispatch(decrement(cartData))} >-</button>
                                             <br />
-                                            <span className='ms-3'>{cartQuantity}</span>
+                                            <span className='ms-3'>{cartData.quantity}</span>
                                             <br />
-                                            <button type='button' className='btn btn-info ms-3' onClick={() => handleQuantity("inc")}>+</button>
+                                            <button type='button' className='btn btn-info ms-3' onClick={() => dispatch(addCart(cartData))}>+</button>
                                             <button type='button' className='btn btn-danger ms-3' style={{ width: "5rem" }} onClick={() => handleRemove(cartData)}>Remove</button>
                                         </div>
                                     </div>
